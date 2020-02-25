@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reviews
-  has_many :transactions
-  has_many :listings, through: :transactions
+  has_many :bookings
+  has_many :listings, through: :bookings
 
 
   validates :email, presence: true
