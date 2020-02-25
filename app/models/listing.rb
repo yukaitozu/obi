@@ -3,5 +3,5 @@ class Listing < ApplicationRecord
   has_many :transactions, dependent: :destroy
   has_one_attached :photo
 
-  validates :title, :
+  validates :title, :price, presence: true
 end
