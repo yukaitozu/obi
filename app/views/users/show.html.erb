@@ -1,14 +1,12 @@
 <h1><%= @user.first_name  %></h1>
 <h1><%= @user.last_name %></h1>
-<h1><%= @use.profile_info %></h1>
+<h1><%= @user.profile_info %></h1>
 
 <% @user.listings.each do |listing| %>
-<%= num %>
 <h1><%= listing.title %></h1>
 <h1><%= listing.description %></h1>
 <h1><%= listing.price %></h1>
 <h1><%= listing.category %></h1>
 <h1><%= listing.size %></h1>
 <h1><%= listing.average_rating %></h1>
-
 <% end %>
