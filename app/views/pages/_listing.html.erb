@@ -1,0 +1,5 @@
+<% Listing.where(id:current_user).each do |listing| %>
+  <%= listing.title %>
+  <%= listing.price %>
+  <%= listing.average_rating %>
+<% end %>
