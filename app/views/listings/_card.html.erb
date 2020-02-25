@@ -1,3 +1,8 @@
 <!-- add photo -->
 <%= listing.title %>
 <%= listing.price %>
+<% if listing.photo.attached? %>
+<%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
+<% else %>
+<%= image_tag "singleKimono.jpg"%>
+<% end %>
