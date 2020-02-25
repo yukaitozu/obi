@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :reviews
   has_many :bookings
-  has_many :listings, through: :bookings
+  has_many :listings
 
 
   validates :email, presence: true
