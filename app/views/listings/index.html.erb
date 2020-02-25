@@ -1,0 +1,4 @@
+<h1>Listings#index</h1>
+<% @listings.each do |listing| %>
+  <%= render "listings/card", listing: listing %>
+<% end %>
