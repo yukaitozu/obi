@@ -1,6 +1,6 @@
-class CreateTransactions < ActiveRecord::Migration[5.2]
+class CreateBookings < ActiveRecord::Migration[5.2]
   def change
-    create_table :transactions do |t|
+    create_table :bookings do |t|
       t.date :start_date
       t.date :return_date
       t.boolean :approved
