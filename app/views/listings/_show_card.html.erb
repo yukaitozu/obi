@@ -3,7 +3,7 @@
     <div class="col-12 col-md-6">
     <div class="kimono">
       <% if listing.photo.attached? %>
-      <%= cl_image_tag @listing.photo.key, height: 250, width: 300, crop: :fill %>
+      <%= cl_image_tag @listing.photo.key, height: 350, width: 300, crop: :fill %>
       <% else %>
       <%= image_tag "singleKimono.jpg", class:"kimono-image"%>
       <% end %>
@@ -11,17 +11,18 @@
     </div>
     <div class="col-12 col-md-6">
       <div class="user_info">
-        <h1><%= @listing.title %></h1>
-        <h3><%= @listing.description %></h3>
-        <h3>¥<%= @listing.price %></h3>
-        <h3><%= @listing.category %></h3>
-        <h3><%= @listing.color %></h3>
+        <h1><strong><%= @listing.title %> </strong> </h1>
+        <p><%= @listing.color%> <%= @listing.category %></p>
+        <p>¥<%= @listing.price %></p>
         <h3><%= @listing.average_rating %></h3>
+        <div class="description">
+          <%= @listing.description %>
+        </div>
       </div>
       <div class="text-center">
         <div class="btn">
-          <%= link_to 'RequestRental', listing_path(listing), class: "btn-red" %>
-          <%= link_to 'Back to Listing Result', listing_path(listing), class: "btn-gray" %>
+          <%= link_to 'Request Rental', listing_path(listing), class: "btn-red" %>
+          <%= link_to 'Back to Listings', listing_path(listing), class: "btn-gray" %>
         </div>
       </div>
     </div>

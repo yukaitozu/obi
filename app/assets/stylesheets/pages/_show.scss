@@ -1,9 +1,24 @@
 .kimono-image {
-  width: 600px;
+  width: 100%;
 }
 .user_info{
   text-align: center;
 }
 .btn{
+  text-align: center;
   margin-top: 10px;
+}
+
+.btn-gray{
+  margin-left: 10px;
+}
+
+.description{
+  font-size: 15px;
+  overflow-wrap: break-word;
+}
+
+
+p{
+  font-size: 24px;
 }
