@@ -1,4 +1,15 @@
-<h1>Pages#dashboard</h1>
-<%= render 'pages/listing' %>
+<div class="container">
+<h1>My Dashboard</h1>
 <%#= render 'pages/dashboard_card' %>
 <%= render 'pages/profile_card' %>
+
+<div class="d-flex">
+<%= render 'pages/listing' %>
+</div>
+
+
+
+
+<%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+
+</div>
