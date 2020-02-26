@@ -1,0 +1,11 @@
+<% @listings.each do |listing| %>
+  <% if listing.photo.attached? %>
+    <%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
+  <% else %>
+    <%= image_tag "singleKimono.jpg"%>
+  <% end %>
+  <%= link_to listing.title, listing_path(listing) %>
+  <%= listing.price %>
+<% end %>
+
+<%= link_to 'New Listing', new_listing_path, class: "btn"  %>
