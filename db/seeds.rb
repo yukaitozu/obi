@@ -13,13 +13,6 @@ Booking.destroy_all
 Listing.destroy_all
 User.destroy_all
 
-User.create!(
-  email: "yuka@gmail.com",
-  password: "123456",
-  first_name: "Yuka",
-  profile_info: "Passionate about kimonos! Has a variety of different styles of kimonos from yukatas to hakamas!"
-  )
-
 20.times do
   User.create!(
   first_name: Faker::Name.first_name,
@@ -41,3 +34,10 @@ User.last(10).each do |user|
     Booking.create!(user: user, listing: Listing.all.sample, start_date: start_date , return_date: start_date + rand(1..3).days, approved: rand(0..2) > 0)
   end
 end
+
+User.create!(
+  email: "yuka@gmail.com",
+  password: "123456",
+  first_name: "Yuka",
+  profile_info: "Passionate about kimonos! Has a variety of different styles of kimonos from yukatas to hakamas!"
+  )
