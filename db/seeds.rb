@@ -13,9 +13,16 @@ Booking.destroy_all
 Listing.destroy_all
 User.destroy_all
 
+User.create!(
+  email: "yuka@gmail.com",
+  password: "123456",
+  first_name: "Yuka",
+  profile_info: "Passionate about kimonos! Has a variety of different styles of kimonos from yukatas to hakamas!"
+  )
+
 20.times do
   User.create!(
-  first_name: Faker::Name.first_name, 
+  first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "123456"
