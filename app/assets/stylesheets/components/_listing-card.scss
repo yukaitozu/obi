@@ -1,0 +1,30 @@
+// listing card for dashboard
+.listing-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 300px;
+  width: 250px;
+  margin: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.listing-card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.listing-card .listing-card-info {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.listing-card p {
+  font-size: 16px;
+  margin: 0;
+}
+
