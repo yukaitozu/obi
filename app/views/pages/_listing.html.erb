@@ -1,11 +1,18 @@
-<% @listings.each do |listing| %>
-  <% if listing.photo.attached? %>
-    <%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
-  <% else %>
-    <%= image_tag "singleKimono.jpg"%>
-  <% end %>
-  <%= link_to listing.title, listing_path(listing) %>
-  <%= listing.price %>
-<% end %>
-
-<%= link_to 'New Listing', new_listing_path, class: "btn"  %>
+<div class="container">
+  <div class="listing-card">
+    <% @listings.each do |listing| %>
+      <% if listing.photo.attached? %>
+        <%= cl_image_tag listing.photo.key, height: 300, width: 250, crop: :scale %>
+      <% else %>
+        <%= image_tag "singleKimono.jpg"%>
+      <% end %>
+      <div class="listing-card-info">
+        <div>
+          <p><%= link_to listing.title, listing_path(listing) %></p>
+          <p>¥<%= listing.price %></p>
+        </div>
+    <% end %>
+    </div>
+  </div>
+  <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+</div>
