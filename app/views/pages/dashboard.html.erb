@@ -1,4 +1,19 @@
-<h1>Pages#dashboard</h1>
-<%= render 'pages/listing' %>
-<%#= render 'pages/dashboard_card' %>
-<%= render 'pages/profile_card' %>
+<div class="container">
+
+  <h1>Your Dashboard</h1>
+  <div class="row">
+    <div class="col-xs-12 col-sm 6 col-m-3">
+      <div class="dashboard-split mt-5">
+        <div class="card-left">
+        </div>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean hendrerit sollicitudin dui, non pulvinar est suscipit et. Ut quis lobortis mauris. Curabitur convallis sit amet felis ut vestibulum. Vivamus sit amet elit ac tortor tincidunt tincidunt.</p>
+        <div class="card-right">
+        <%= render 'pages/listing' %>
+        <%#= render 'pages/dashboard_card' %>
+        <%= render 'pages/profile_card' %>
+        </div>
+      </div>
+      <%= link_to 'New Listing', new_listing_path, class: "btn-red"  %>
+    </div>
+  </div>
+</div>
