@@ -1,16 +1,15 @@
-<% @listings.each do |listing| %>
-  <div class="listing-card">
+<div class="listing-card">
     <% if listing.photo.attached? %>
       <%= cl_image_tag listing.photo.key, height: 300, width: 250, crop: :scale %>
     <% else %>
-      <%= image_tag "singleKimono.jpg"%>
+      <%= image_tag "orange-hakama.jpg"%>
     <% end %>
   <div class="listing-card-info">
     <div>
       <p><%= link_to listing.title, listing_path(listing) %></p>
       <p>¥<%= listing.price %></p>
     </div>
-  </div> 
+  </div>
 </div>
-  <% end %>
+
 

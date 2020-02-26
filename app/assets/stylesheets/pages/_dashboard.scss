@@ -1,3 +1,54 @@
-.avatar .image_tag {
-  border-radius: 50%;
+.container {
+  border-radius: 4px;
+}
+
+.card-left {
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: $red;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 150px;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px #a2a0a0;
+  }
+
+  p {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.card-right {
+
+  text-align: center;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+  .btn-red {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .listing-card {
+    width: 150px;
+    height: 200px;
+
+    img {
+      width: 100px;
+      height: 140px;
+    }
+
+  }
+
 }
