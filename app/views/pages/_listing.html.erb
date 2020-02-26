@@ -2,4 +2,7 @@
   <%= listing.title %>
   <%= listing.price %>
   <%= listing.average_rating %>
+  <%= link_to , listing_path(@listing) %>
 <% end %>
+
+<%= link_to 'New Listing', new_listing_path, class: "btn"  %>
