@@ -3,7 +3,7 @@
 <%= @listing.price %>
 <%= @listing.category %>
 <%= @listing.color %>
-<%= @listing.average_ratinge %>
+<%= @listing.average_rating %>
 <% if listing.photo.attached? %>
 <%= cl_image_tag @listing.photo.key, height: 250, width: 300, crop: :fill %>
 <% else %>
