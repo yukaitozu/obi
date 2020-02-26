@@ -1,12 +1,14 @@
 .btn-red {
   background-color: $red;
-  font-color: white;
-  border-radius: 4px;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 24px;
 
 }
 
 .btn-gray {
   background-color: $light-gray;
   font-color: black;
-  border-radius: 4px;
+  border-radius: 8px;
+  padding: 10px 24px;
 }
