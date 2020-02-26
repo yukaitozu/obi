@@ -9,8 +9,12 @@
 
   h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
     color: $red;
+  }
+
+  h3 {
+    font-size: 22px;
   }
 
   img {
@@ -24,6 +28,7 @@
   p {
     padding-right: 10px;
     padding-left: 10px;
+    font-size: 18px;
   }
 }
 
@@ -33,7 +38,7 @@
 
   h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
   }
   .btn-red {
     display: inline-block;

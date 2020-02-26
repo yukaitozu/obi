@@ -1,5 +1,5 @@
 <!-- avatar -->
-<%= current_user.first_name %>
-<%= current_user.email %>
-<%= current_user.profile_info %>
+<h2>Welcome, <%= current_user.first_name %>!</h2>
+<h3><%= current_user.email %></h3>
+<p><%= current_user.profile_info %></p>
 <%#= User.find(id:current_user).last_name %>
