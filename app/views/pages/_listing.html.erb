@@ -1,8 +1,11 @@
-<% Listing.where(id:current_user).each do |listing| %>
-  <%= listing.title %>
+<% @listings.each do |listing| %>
+  <% if listing.photo.attached? %>
+    <%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
+  <% else %>
+    <%= image_tag "singleKimono.jpg"%>
+  <% end %>
+  <%= link_to listing.title, listing_path(listing) %>
   <%= listing.price %>
-  <%= listing.average_rating %>
-  <%= link_to , listing_path(@listing) %>
 <% end %>
 
 <%= link_to 'New Listing', new_listing_path, class: "btn"  %>

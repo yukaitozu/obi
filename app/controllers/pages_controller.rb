@@ -4,5 +4,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @listings = current_user.listings
   end
 end
