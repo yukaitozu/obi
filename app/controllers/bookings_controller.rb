@@ -13,15 +13,23 @@ class BookingsController < ApplicationController
   def create
     @listing = Listing.find(params[:listing_id])
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
+    @booking.borrower = current_user
     @booking.listing = @listing
-    raise
     if @booking.save
+      raise
       redirect_to listings_path(@listing)
     else
       render :new
     end
     authorize @booking
+  end
+
+  def approved?
+
+  end
+
+  def approve
+
   end
 
   private

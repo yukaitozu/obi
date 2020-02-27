@@ -1,5 +1,11 @@
 <h1>Bookings#show</h1>
-<% @bookings.each do |booking| %>
-  <%= booking.start_date %>
-  <%= booking.return_date %>
+<% if @booking.renter %>
+  <!-- add borrower's avatar -->
+  <%= @booking.start_date %>
+  <%= @booking.return_date %>
+
+<% else %>
+  <%= %>
 <% end %>
+
+
