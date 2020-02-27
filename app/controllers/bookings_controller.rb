@@ -45,7 +45,6 @@ class BookingsController < ApplicationController
     redirect_to booking_path
   end
 
->>>>>>> master
   private
 
   def booking_params
