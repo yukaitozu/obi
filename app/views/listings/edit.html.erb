@@ -1,2 +1,9 @@
-<h1>Listings#edit</h1>
-<p>Find me in app/views/listings/edit.html.erb</p>
+<%= simple_form_for @listing do |f| %>
+  <%= f.input :title %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :color %>
+  <%= f.input :category %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit 'Submit', class: 'btn-red' %>
+<% end %>
