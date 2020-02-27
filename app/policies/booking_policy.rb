@@ -6,7 +6,7 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def show?
-    record.user == user || record.listing.user == user
+    record.renter == user || record.listing.borrower == user
   end
 
   def new?
@@ -17,4 +17,11 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def approve?
+    record.renter == user
+  end
+
+  def reject?
+    record.renter == user
+  end
 end
