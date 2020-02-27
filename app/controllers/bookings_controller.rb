@@ -13,10 +13,11 @@ class BookingsController < ApplicationController
   def create
     @listing = Listing.find(params[:listing_id])
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.listing = @listing
     raise
     if @booking.save
-      redirect_to listing_path(@listing)
+      redirect_to listings_path(@listing)
     else
       render :new
     end
