@@ -4,7 +4,11 @@
       <div class="col-4">
         <div class="card-left py-2">
           <div class="user-pic">
-            <%= cl_image_tag current_user.photo.key, height: 150, width: 200, crop: :fill %>
+            <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill, class: "avatar-round-large" %>
+            <% else %>
+              <%= image_tag 'blank_avatar.png', class: "avatar-round-large" %>
+            <% end %>
           </div>
           <%= render 'pages/profile_card' %>
             <div>

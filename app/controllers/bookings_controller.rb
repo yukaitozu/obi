@@ -16,15 +16,12 @@ class BookingsController < ApplicationController
     @booking.borrower = current_user
     @booking.listing = @listing
     if @booking.save
-      raise
       redirect_to listings_path(@listing)
     else
       render :new
     end
     authorize @booking
   end
-
-
 
   def approve
     @booking = Booking.find(params[:id])

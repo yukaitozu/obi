@@ -12,6 +12,6 @@ class Listing < ApplicationRecord
 
   validates :title, :price, presence: true
 
-  CATEGORIES = ["Women's", "Men's", "Kids", "Kimono", "Hakama", "Yukata", "Wedding"]
+  CATEGORIES = ["Women's", "Men's", "Kids", "Kimono", "Hakama", "Yukata", "Wedding", "Furisode", "Short Kimono"]
   COLORS = ["Red", "Blue", "Orange", "Pink", "Purple", "Yellow", "Black", "Brown", "Green", "White"]
 end
