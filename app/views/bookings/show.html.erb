@@ -3,9 +3,27 @@
   <!-- add borrower's avatar -->
   <%= @booking.start_date %>
   <%= @booking.return_date %>
+  <%= link_to "Approve", "/bookings/#{@booking.id}/approve" %>
+  <%#= link_to "Approve", approve_path(@booking) %>
+  <%= link_to "Reject", reject_path(@booking) %>
+  <% if @booking.approved? %>
+    <p>Approved</p>
+  <% elsif !@booking.approved? %>
+    <p>Rejected</p>
+  <% else %>
+    <p>Pending</p>
+  <% end %>
 
 <% else %>
-  <%= %>
+  <%= @booking.start_date %>
+  <%= @booking.return_date %>
+  <% if @booking.approved? %>
+    <p>Approved</p>
+  <% elsif !@booking.approved? %>
+    <p>Rejected</p>
+  <% else %>
+    <p>Pending</p>
+  <% end %>
 <% end %>
 
 

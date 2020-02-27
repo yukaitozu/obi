@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # end
 
   get "dashboard", to: "pages#dashboard"
+  get "bookings/:id/approve", to: "bookings#approve", as: :approve
+  get "bookings/:id/reject", to: "bookings#reject", as: :reject
 
   resources :listings do
     resources :bookings, only: [:new, :create]

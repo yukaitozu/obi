@@ -17,4 +17,11 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def approve?
+    record.renter == user
+  end
+
+  def reject?
+    record.renter == user
+  end
 end

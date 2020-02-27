@@ -1,0 +1,4 @@
+<%= simple_form_for(@booking, remote: true, data: { confirm: "Are you sure?"}) do |f| %>
+  <%= f.submit "Approve", class: "btn btn-success" %>
+  <%= f.submit "Reject", class: "btn btn-danger" %>
+<% end %>

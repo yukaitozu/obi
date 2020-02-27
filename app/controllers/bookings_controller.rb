@@ -24,12 +24,28 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def approved?
 
-  end
 
   def approve
+    @booking = Booking.find(params[:id])
+    authorize @booking
 
+    @booking.update(approved: true)
+
+    current_listing = @booking.listing
+    all_bookings_for_my_listing = current_listing.bookings
+
+    bookings_to_reject = all_bookings_for_my_listing.where(approved: nil)
+    bookings_to_reject.update(approved: false)
+    redirect_to dashboard_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    authorize @booking
+
+    @booking.update(approved:false)
+    redirect_to booking_path
   end
 
   private
