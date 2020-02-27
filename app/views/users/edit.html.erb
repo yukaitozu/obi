@@ -1,0 +1,9 @@
+<%= simple_form_for(@user) do |f| %>
+<%= f.input :first_name %>
+<%= f.input :last_name %>
+<%=f.input :profile_info %>
+<%= f.input :password %>
+<%= f.input :password_confirmation %>
+<%= f.submit 'Submit'  %>
+<% end %>
+

@@ -13,7 +13,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :photo])
 
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :photo])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :profile_info, :photo])
+  end
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
   end
 
   # Uncomment when you *really understand* Pundit!

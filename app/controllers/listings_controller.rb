@@ -20,12 +20,12 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.user = current_user
-    authorize @listing
     if @listing.save
       redirect_to dashboard_path(@listing)
     else
       render :new
     end
+    authorize @listing
   end
 
   def edit
