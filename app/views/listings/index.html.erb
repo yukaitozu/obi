@@ -1,10 +1,11 @@
 <div class="container">
-  <h1>Listings#index</h1>
+  <h1>Listings</h1>
   <div class="row">
-    <div class="col-4">
-      <% @listings.each do |listing| %>
+    <% @listings.each do |listing| %>
+      <div class="col-3 mb-3">
         <%= render "listings/card", listing: listing %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
+
