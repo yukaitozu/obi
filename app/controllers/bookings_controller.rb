@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
     @listing = Listing.find(params[:listing_id])
     @booking = Booking.new(booking_params)
     @booking.listing = @listing
+    raise
     if @booking.save
       redirect_to listing_path(@listing)
     else
