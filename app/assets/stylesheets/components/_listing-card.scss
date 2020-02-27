@@ -3,27 +3,29 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 16px;
+  margin: 10px;
   justify-content: center;
   align-items: center;
-}
 
-.listing-card img {
+  img {
   object-fit: cover;
 }
 
-.listing-card .listing-card-info {
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  p {
+    font-size: 12px;
+    margin: 2px;
+  }
 
+  .listing-card-info {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+  }
 }
 
 
-.listing-card p {
-  font-size: 12px;
-  margin: 2px;
-}
+
 
 

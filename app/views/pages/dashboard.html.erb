@@ -5,20 +5,37 @@
         <div class="card-left py-2">
           <%= image_tag("yukapic.png") %>
           <%= render 'pages/profile_card' %>
+            <div>
+              <%= link_to 'View Profile', new_listing_path, class: "btn btn-red"  %>
+              <%= link_to 'Edit Profile', new_listing_path, class: "btn btn-red"  %>
+            </div>
         </div>
       </div>
 
       <div class="col-8">
         <div class="container card-right">
-          <h2>My Listings</h2>
+          <h2>My Latest Listings</h2>
+          <p>More...</p>
           <div class="row">
-              <% @listings.each do |listing| %>
+              <% @listings.last(3).each do |listing| %>
                 <div class="col-4">
                   <%= render 'pages/listing', listing: listing %>
                 </div>
               <% end %>
           </div>
             <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+          </div>
+          <div class="row">
+            <h2>My Bookings</h2>
+            <p> date </p>
+            <p> order </p>
+            <p> status </p>
+          </div>
+          <div class="row">
+            <h2>My Orders</h2>
+            <p> date </p>
+            <p> order </p>
+            <p> status </p>
           </div>
       </div>
   </div>
