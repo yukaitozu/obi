@@ -31,7 +31,7 @@ end
 User.last(10).each do |user|
   rand(1..3).times do
     start_date = Faker::Date.in_date_period(month: 1)
-    Booking.create!(user: user, listing: Listing.all.sample, start_date: start_date , return_date: start_date + rand(1..3).days, approved: rand(0..2) > 0)
+    Booking.create!(borrower: user, listing: Listing.all.sample, start_date: start_date , return_date: start_date + rand(1..3).days, approved: rand(0..2) > 0)
   end
 end
 
