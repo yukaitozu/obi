@@ -46,5 +46,5 @@ User.create!(
   email: "noemi@gmail.com",
   password: "123456",
   first_name: "Noemi",
-  profile_info: "I love Japanese culture and traveling to different parts of Japan. I would love to rent a kimono and get the full Japan experience!"
+  profile_info: "I love Japanese culture and traveling to different parts of Japan. I would love to rent a kimono and get the full Japanese experience!"
   )
