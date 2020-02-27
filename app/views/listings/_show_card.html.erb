@@ -5,7 +5,7 @@
       <% if listing.photo.attached? %>
       <%= cl_image_tag @listing.photo.key, height: 350, width: 300, crop: :fill %>
       <% else %>
-      <%= image_tag "singleKimono.jpg", class:"kimono-image"%>
+      <%= image_tag "orange-hakama.jpg", class:"kimono-image"%>
       <% end %>
     </div>
     </div>
@@ -23,6 +23,8 @@
         <div class="btn">
           <%= link_to 'Request Rental', listing_path(listing), class: "btn-red" %>
           <%= link_to 'Back to Listings', listing_path(listing), class: "btn-gray" %>
+          <!-- link to delete & edit   -->
+
         </div>
       </div>
     </div>
