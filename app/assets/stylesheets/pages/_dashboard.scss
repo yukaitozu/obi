@@ -40,18 +40,24 @@
     text-align: center;
     font-size: 32px;
   }
-  .btn-red {
+  .btn-gray {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   .listing-card {
     width: 150px;
-    height: 200px;
+    height: 225px;
+    border-radius: 4px;
 
     img {
       width: 100px;
       height: 140px;
+    }
+
+    .icons {
+      color: $red;
     }
 
   }
