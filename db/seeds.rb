@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'date'
-KIMONOS = ["Red kimono", "Pink Kimono", "Yellow Yukata", "Black Mens Kimono", "Purple Yukata"]
+KIMONOS = ["Red kimono", "Edo Era Kimono", "Summer Yukata", "Embroidered Mens Kimono", "Purple Yukata", "Fancy Hakama", "Wedding Kimono", ]
 
 Review.destroy_all
 Booking.destroy_all
@@ -24,7 +24,7 @@ end
 
 User.first(10).each do |user|
   rand(1..5).times do
-    Listing.create!(user: user, title: KIMONOS.sample, price: Faker::Number.number(digits: 4))
+    Listing.create!(user: user, title: KIMONOS.sample, price: Faker::Number.number(digits: 4), color: Listing::COLOR.sample, category: Listing::CATEGORIES.sample)
   end
 end
 
