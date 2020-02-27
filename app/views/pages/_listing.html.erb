@@ -2,14 +2,14 @@
     <% if listing.photo.attached? %>
       <%= cl_image_tag listing.photo.key, height: 300, width: 250, crop: :scale %>
     <% else %>
-      <%= image_tag "orange-hakama.jpg"%>
+      <%= image_tag "orange-hakama.jpg" %>
     <% end %>
   <div class="listing-card-info">
     <div>
       <p><%= listing.title %></p>
       <p>¥<%= listing.price %></p>
       <div class="icons">
-      <%= link_to edit_listing_path(listing) do%>
+      <%= link_to edit_listing_path(listing) do %>
         <i class="fas fa-pencil-alt"></i>
       <% end %>
       <%= link_to listing_path(listing), method: :delete  do %>
