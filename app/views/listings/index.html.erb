@@ -1,4 +1,15 @@
-<h1>Listings#index</h1>
-<% @listings.each do |listing| %>
-  <%= render "listings/card", listing: listing %>
-<% end %>
+<div class="container">
+  <h1>Listings</h1>
+  <div class="filters">
+    <p>Searchbar</p>
+    <p>Filter Dropdown</p>
+  </div>
+  <div class="row">
+    <% @listings.each do |listing| %>
+      <div class="col-3 mb-3">
+        <%= render "listings/card", listing: listing %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

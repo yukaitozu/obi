@@ -1,8 +1,19 @@
 <!-- add photo -->
-<%= listing.title %>
-<%= listing.price %>
-<% if listing.photo.attached? %>
-<%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
-<% else %>
-<%= image_tag "singleKimono.jpg"%>
-<% end %>
+<div class="index-card">
+  <div class="index-card-pic">
+    <% if listing.photo.attached? %>
+      <%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
+    <% else %>
+      <%= image_tag "orange-hakama.jpg"%>
+    <% end %>
+  </div>
+  <div class="index-card-info">
+    <div>
+      <p><%= link_to listing.title, listing_path(listing) %></p>
+      <p>¥<%= listing.price %> per day</p>
+      <div class="avatar">
+        <%= image_tag("girl2.jpg") %>
+      </div>
+    </div>
+  </div>
+</div>
