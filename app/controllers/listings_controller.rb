@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: [:show]
+  before_action :set_listing, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     authorize @listing
     if @listing.save
-      redirect_to listing_path(@listing)
+      redirect_to dashboard_path(@listing)
     else
       render :new
     end
@@ -31,6 +31,17 @@ class ListingsController < ApplicationController
   def edit
 
   end
+
+  def update
+    @listing.update(listing_params)
+    redirect_to dashboard_path(@listing)
+  end
+
+  def destroy
+    @listing.destroy
+    redirect_to dashboard_path
+  end
+
 
   private
 
