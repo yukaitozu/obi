@@ -40,24 +40,35 @@ padding: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
 
-  img {
+  .index-card-pic img {
     height: 225px;
     width: 150px;
     object-fit: cover;
+    padding: 10px;
+    align-items: center;
 
     }
 
     p {
       font-size: 14px;
+      margin-bottom: 5px;
     }
 
   .index-card-info {
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    text-align: left;
 
     .avatar img {
-      height: 50px;
-      width: 50px;
+      height: 55px;
+      width: 55px;
       border-radius: 50%;
+      position: absolute;
+      right: 16px;
+      top: -35px;
     }
   }
 }
