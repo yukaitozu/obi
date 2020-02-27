@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     authorize @listing
     if @listing.save
-      redirect_to listing_path(@listing)
+      redirect_to dashboard_path(@listing)
     else
       render :new
     end
@@ -34,12 +34,12 @@ class ListingsController < ApplicationController
 
   def update
     @listing.update(listing_params)
-    redirect_to listing_path(@listing)
+    redirect_to dashboard_path(@listing)
   end
 
   def destroy
     @listing.destroy
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
 
