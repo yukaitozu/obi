@@ -11,4 +11,7 @@ class Listing < ApplicationRecord
   has_one_attached :photo
 
   validates :title, :price, presence: true
+
+  CATEGORIES = ["Women's", "Men's", "Kids", "Kimono", "Hakama", "Yukata", "Wedding"]
+  COLORS = ["Red", "Blue", "Orange", "Pink", "Purple", "Yellow", "Black", "Brown", "Green", "White"]
 end
