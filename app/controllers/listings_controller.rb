@@ -5,15 +5,17 @@ class ListingsController < ApplicationController
   def index
     @listings = Listing.all
     @listings = policy_scope(Listing)
-    if params[:query]
+
+    if params[:query] && !params[:query].empty? 
       @listings = @listings.search_by_title_and_description(params[:query])
     end
 
-    if params[:color]
+
+    if  params[:color] && !params[:color].empty?
       @listings = @listings.where(color: params[:color])
     end
 
-    if params[:category]
+    if params[:category] && !params[:category].empty?
       @listings = @listings.where(category: params[:category])
     end
   end

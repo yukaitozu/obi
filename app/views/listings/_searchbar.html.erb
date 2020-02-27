@@ -1,0 +1,10 @@
+<%= form_tag listings_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a kimono"
+  %>
+  <%= select_tag :color, options_for_select(Listing::COLORS, params[:color]), include_blank: true %>
+  <%= select_tag :category, options_for_select(Listing::CATEGORIES, params[:category]), include_blank: true %>
+  <%= submit_tag "Search", class: "btn btn-red" %>
+<% end %>
