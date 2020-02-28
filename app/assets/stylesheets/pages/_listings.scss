@@ -5,9 +5,32 @@
 .index-card {
   border-radius: 4px;
   display:inline-block;
+  margin-bottom: 20px;
 }
 
-.filters {
+.form-group {
   display: flex;
-  justify-content: space-between;
+
+  #color {
+    margin-left: 16px;
+  }
+
+  #category {
+    margin-left: 16px;
+  }
+
+  .btn-red {
+    margin-left: 16px;
+    margin-top: 0px;
+  }
+
+  p {
+    margin-left: 16px;
+    font-size: 14px;
+  }
+}
+
+h1 {
+  margin-top: 28px;
+  margin-bottom: 36px;
 }
