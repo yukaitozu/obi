@@ -1,9 +1,11 @@
-<%= simple_form_for @listing do |f| %>
-  <%= f.input :title %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :color %>
-  <%= f.input :category %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit 'Submit', class: 'btn-red' %>
-<% end %>
+<div class="container">
+  <%= simple_form_for @listing do |f| %>
+    <%= f.input :title %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.input :color %>
+    <%= f.input :category %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit 'Submit', class: 'btn-red' %>
+  <% end %>
+</div>
