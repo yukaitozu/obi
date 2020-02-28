@@ -12,8 +12,8 @@
           </div>
           <%= render 'pages/profile_card' %>
             <div>
-              <%= link_to 'View Profile', new_listing_path, class: "btn btn-red"  %>
-              <%= link_to 'Edit Profile', new_listing_path, class: "btn btn-red"  %>
+              <%= link_to 'View Profile', user_path(current_user), class: "btn btn-red"  %>
+              <%= link_to 'Edit Profile', user_path(current_user), class: "btn btn-red"  %>
             </div>
         </div>
       </div>
@@ -33,15 +33,20 @@
           </div>
           <div class="row">
             <h2>My Bookings</h2>
-            <p> date </p>
-            <p> order </p>
-            <p> status </p>
+            <% @bookings.last(5).each do |booking| %>
+              <%= booking.start_date %>
+              <%= booking.return_date %>
+              <%= booking.total %>
+            <% end %>
           </div>
           <div class="row">
             <h2>My Orders</h2>
-            <p> date </p>
-            <p> order </p>
-            <p> status </p>
+            <% @orders.last(5).each do |order| %>
+              <p>From: <%= order.start_date %></p>
+              <p>To: <%= order.return_date %></p>
+              <p>Total: ¥<%= order.total %></p>
+            <% end %>
+          <%= link_to 'See more...', bookings_path(@bookings, @orders) %>
           </div>
       </div>
   </div>

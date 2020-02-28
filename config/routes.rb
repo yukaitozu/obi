@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:show]
-  resources :bookings, only: [:show]
+  resources :bookings, only: [:index, :show]
 end

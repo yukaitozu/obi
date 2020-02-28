@@ -1,0 +1,19 @@
+<h1>My Bookings</h1>
+<!-- <#% @orders.each do |order| %>
+  <p>
+  # <#%= order.id %>
+  Date: <#%= order.start_date %>
+  <#%= order.return_date %>
+  Total: ¥<#%= order.total %></p>
+
+<#% end %> -->
+<h1>My orders</h1>
+
+<% @bookings.each do |booking| %>
+  <p>
+  # <%= booking.id %>
+  Date: <%= booking.start_date %>
+  <%= booking.return_date %>
+  Total: ¥<%= booking.total %></p>
+
+<% end %>
