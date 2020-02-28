@@ -17,14 +17,4 @@
           <%= link_to "Login", new_user_session_path, class: "obi-link" %>
         <% end %>
       </div>
-
-        <%= form_tag listings_path, method: :get, class:"form-inline"  do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a kimono"
-          %>
-          <%= submit_tag "Search", class: "btn btn-red"  %>
-        <% end %>
-
 </nav>
