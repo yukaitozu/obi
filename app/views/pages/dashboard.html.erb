@@ -20,7 +20,7 @@
 
       <div class="col-sm-12 col-md-8">
         <div class="container card-right">
-          <h2>My Latest Listings</h2>
+          <h2 class="bookings-title">My Latest Listings</h2>
           <p>More...</p>
           <div class="row">
               <% @listings.last(3).each do |listing| %>
@@ -31,9 +31,10 @@
           </div>
             <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
           </div>
+          <div class="bookings-container">
           <div class="row">
             <div class="col-6">
-            <h2>My Bookings</h2>
+            <h2 class="bookings-title">My Bookings</h2>
             <% @bookings.last(5).each do |booking| %>
               <p class="bookings-dashboard-text text-left">
               <%= booking.start_date %>
@@ -43,7 +44,7 @@
             <% end %>
           </div>
             <div class="col-6">
-            <h2>My Orders</h2>
+            <h2 class="bookings-title">My Orders</h2>
             <% @orders.last(5).each do |order| %>
               <p class="bookings-dashboard-text text-left">
               From: <%= order.start_date %>
@@ -51,6 +52,7 @@
               Total: ¥<%= order.total %>
               </p>
             <% end %>
+          </div>
           </div>
           <%= link_to 'See more...', bookings_path(@bookings, @orders) %>
           </div>
