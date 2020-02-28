@@ -6,17 +6,17 @@
     placeholder: "Find a kimono"
   %>
   </div>
-<div class="d-flex align-items-center">
-    <div class="form-group">
+<div class="search-dropdowns">
+    <div id="color-form">
       <p>Color: </p>
       <%= select_tag :color, options_for_select(Listing::COLORS, params[:color]), include_blank: true %>
     </div>
 
-    <div class="form-group">
+    <div id="category-form">
         <p>Category: </p>
         <%= select_tag :category, options_for_select(Listing::CATEGORIES, params[:category]), include_blank: true %>
     </div>
 <% end %>
-    <%= submit_tag "Search", class: "btn btn-red" %>
+    <%= submit_tag "Search", class: "btn btn-listing" %>
   </div>
 

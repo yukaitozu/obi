@@ -10,7 +10,7 @@
   <div class="index-card-info">
     <div>
       <p><%= link_to listing.title, listing_path(listing) %></p>
-      <p>¥<%= listing.price %> per day</p>
+      <p>¥<%= listing.price %> <em>per day</em></p>
       <div class="index-card-avatar">
         <%= link_to user_path(listing)  do %>
         <% if  listing.user.photo.attached? %>
