@@ -41,7 +41,7 @@ class BookingsController < ApplicationController
 
     bookings_to_reject = all_bookings_for_my_listing.where(approved: nil)
     bookings_to_reject.update(approved: false)
-    redirect_to dashboard_path
+    redirect_to bookings_path
   end
 
   def reject
@@ -49,7 +49,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.update(approved:false)
-    redirect_to booking_path
+    redirect_to bookings_path
   end
 
   private

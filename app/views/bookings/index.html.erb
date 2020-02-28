@@ -44,12 +44,12 @@
 <% else %>
   <%= booking.start_date %>
   <%= booking.return_date %>
-  <% if booking.approved? %>
-    <p>Approved</p>
-  <% elsif !booking.approved? %>
-    <p>Rejected</p>
-  <% else %>
+  <% if booking.approved.nil? %>
     <p>Pending</p>
+  <% elsif booking.approved? %>
+    <p>Approved</p>
+  <% else %>
+    <p>Rejected</p>
   <% end %>
 <% end %>
 
@@ -65,7 +65,7 @@
   Date: <%= booking.start_date %>
   <%= booking.return_date %>
   Total: <%= booking.total %>
-  Status: <% if !booking.approved? %>
+  Status: <% if booking.approved.nil? %>
     Pending
   <% elsif booking.approved? %>
     Approved
