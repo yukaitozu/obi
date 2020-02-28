@@ -18,33 +18,42 @@
         </div>
       </div>
 
-      <div class="col-8">
+      <div class="col-sm-12 col-md-8">
         <div class="container card-right">
-          <h2>My Latest Listings</h2>
+          <h2 class="bookings-title mb-3">My Latest Listings</h2>
           <div class="row">
               <% @listings.last(3).each do |listing| %>
-                <div class="col-4">
+                <div class="col-sm-12 col-md-4">
                   <%= render 'pages/listing', listing: listing %>
                 </div>
               <% end %>
           </div>
-            <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+
           </div>
+          <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+          <div class="bookings-container">
           <div class="row">
-            <h2>My Bookings</h2>
-            <% @bookings.last(5).each do |booking| %>
-              <%= booking.start_date %>
-              <%= booking.return_date %>
-              <%= booking.total %>
+            <div class="col-6">
+            <h2 class="bookings-title">My Bookings</h2>
+            <% @bookings.last(4).each do |booking| %>
+              <p class="bookings-dashboard-text text-left">
+              <strong>From:</strong> <%= booking.start_date.strftime("%b %d, %Y") %>
+              <strong>To:</strong> <%= booking.return_date.strftime("%b %d, %Y") %>
+              <strong>Total:</strong> ¥<%= booking.total %>
+              </p>
             <% end %>
           </div>
-          <div class="row">
-            <h2>My Orders</h2>
-            <% @orders.last(5).each do |order| %>
-              <p>From: <%= order.start_date %></p>
-              <p>To: <%= order.return_date %></p>
-              <p>Total: ¥<%= order.total %></p>
+            <div class="col-6">
+            <h2 class="bookings-title">My Orders</h2>
+            <% @orders.last(4).each do |order| %>
+              <p class="bookings-dashboard-text text-left">
+              <strong>From:</strong> <%= order.start_date.strftime("%b %d, %Y") %>
+              <strong>To:</strong> <%= order.return_date.strftime("%b %d, %Y") %>
+              <strong>Total:</strong> ¥<%= order.total %>
+              </p>
             <% end %>
+          </div>
+          </div>
           <%= link_to 'See more...', bookings_path(@bookings, @orders) %>
           </div>
       </div>
