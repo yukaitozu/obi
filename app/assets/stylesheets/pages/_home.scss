@@ -1,32 +1,35 @@
 // Specific CSS for your home-page
-body {
-  background-image:
-  linear-gradient(to right, black, transparent),
-  url("kimonoHome.jpg");
+.background-home {
+  // background-image:
+  // linear-gradient(to right, black, transparent),
+  // url("kimonoHome.jpg");
   background-size: cover;
-  height: 300px;
-  width: 100%;
-
-  h1 {
-    font-family: "Roboto";
-    color: white;
-    text-align: center;
-
-  }
-
-  p {
-    color: white;
-    font-size: 18px;
-    margin-top: 18px;
-  }
-  .row {
-    margin-top: 125px;
-    text-align: center;
-  }
-
-  .btn {
-    margin-top: 22px;
-    margin-bottom: 22px;
-  }
+  background-position: center;
+  // padding: 150px 0;
+  // height: 300px;
+  // width: 100%;
 }
+
+h1 {
+  font-family: "Roboto";
+  // color: white;
+  text-align: center;
+
+}
+
+p {
+  // color: white;
+  font-size: 18px;
+  margin-top: 18px;
+}
+.row {
+  margin-top: 125px;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+// }
 
