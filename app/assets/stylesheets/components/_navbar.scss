@@ -8,8 +8,14 @@
 }
 
 .obi-nav-logo {
+  color: $light-beige;
   align-self: center;
   font-size: 24px;
   font-weight: bold;
   font-family: 'Poiret One';
 }
+
+.navbar-light .navbar-nav .nav-link{
+    color: $light-beige;
+  }
+
