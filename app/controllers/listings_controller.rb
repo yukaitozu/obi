@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
     @listings = Listing.all
     @listings = policy_scope(Listing)
 
-    if params[:query] && !params[:query].empty? 
+    if params[:query] && !params[:query].empty?
       @listings = @listings.search_by_title_and_description(params[:query])
     end
 
