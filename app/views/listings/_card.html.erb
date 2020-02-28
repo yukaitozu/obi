@@ -1,7 +1,7 @@
 <!-- add photo -->
 <div class="index-card">
   <div class="index-card-pic">
-    <% if listing.photo.attached? %>
+    <% if listing.photo.attached?  %>
       <%= cl_image_tag listing.photo.key, height: 250, width: 300, crop: :fill %>
     <% else %>
       <%= image_tag "orange-hakama.jpg"%>
@@ -12,7 +12,12 @@
       <p><%= link_to listing.title, listing_path(listing) %></p>
       <p>¥<%= listing.price %> per day</p>
       <div class="index-card-avatar">
-        <%= image_tag("girl2.jpg") %>
+        <% if  listing.user.photo.attached? %>
+          <%#= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
+          <%= cl_image_tag listing.user.photo.key, height: 150, width: 150, crop: :fill %>
+          <% else %>
+          <%= image_tag 'blank_avatar.png' %>
+        <% end %>
       </div>
     </div>
   </div>
