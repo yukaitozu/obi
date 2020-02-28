@@ -2,8 +2,8 @@
   <%= f.input :title %>
   <%= f.input :price %>
   <%= f.input :description %>
-  <%= f.input :color %>
-  <%= f.input :category %>
+  <%= f.input :color, collection: ["Women's", "Men's", "Kids", "Kimono", "Hakama", "Yukata", "Wedding", "Furisode", "Short Kimono"] %>
+  <%= f.input :category, collection: ["Red", "Blue", "Orange", "Pink", "Purple", "Yellow", "Black", "Brown", "Green", "White"]%>
   <%= f.input :photo, as: :file %>
   <%= f.submit 'Submit', class: 'btn-red' %>
 <% end %>
