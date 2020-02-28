@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   #   resources :bookings, only: [:index]
   # end
 
+  get "/listings/:id/bookings/confirm", to: "bookings#confirm", as: :confirm_payment
+
   get "dashboard", to: "pages#dashboard"
   get "bookings/:id/approve", to: "bookings#approve", as: :approve
   get "bookings/:id/reject", to: "bookings#reject", as: :reject

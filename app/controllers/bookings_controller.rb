@@ -15,8 +15,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.borrower = current_user
     @booking.listing = @listing
+    @booking.total = @listing.price * (@booking.return_date.day - @booking.start_date.day)
     if @booking.save
-      redirect_to listings_path(@listing)
+      redirect_to listings_path
     else
       render :new
     end
@@ -48,6 +49,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :return_date)
+    params.require(:booking).permit(:start_date, :return_date, :total)
   end
 end
