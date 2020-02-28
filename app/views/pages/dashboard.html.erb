@@ -37,8 +37,8 @@
             <h2 class="bookings-title">My Bookings</h2>
             <% @bookings.last(5).each do |booking| %>
               <p class="bookings-dashboard-text text-left">
-              <%= booking.start_date %>
-              <%= booking.return_date %>
+              <%= booking.start_date.strftime("%b %d, %Y") %>
+              <%= booking.return_date.strftime("%b %d, %Y") %>
               <%= booking.total %>
               </p>
             <% end %>
