@@ -12,11 +12,13 @@
       <p><%= link_to listing.title, listing_path(listing) %></p>
       <p>¥<%= listing.price %> per day</p>
       <div class="index-card-avatar">
+        <%= link_to user_path(listing)  do %>
         <% if  listing.user.photo.attached? %>
           <%#= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
           <%= cl_image_tag listing.user.photo.key, height: 150, width: 150, crop: :fill %>
           <% else %>
           <%= image_tag 'blank_avatar.png' %>
+        <% end %>
         <% end %>
       </div>
     </div>
