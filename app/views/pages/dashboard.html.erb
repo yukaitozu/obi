@@ -18,13 +18,13 @@
         </div>
       </div>
 
-      <div class="col-8">
+      <div class="col-sm-12 col-md-8">
         <div class="container card-right">
           <h2>My Latest Listings</h2>
           <p>More...</p>
           <div class="row">
               <% @listings.last(3).each do |listing| %>
-                <div class="col-4">
+                <div class="col-sm-12 col-md-4">
                   <%= render 'pages/listing', listing: listing %>
                 </div>
               <% end %>
@@ -32,20 +32,26 @@
             <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
           </div>
           <div class="row">
+            <div class="col-6">
             <h2>My Bookings</h2>
             <% @bookings.last(5).each do |booking| %>
+              <p class="bookings-dashboard-text text-left">
               <%= booking.start_date %>
               <%= booking.return_date %>
               <%= booking.total %>
+              </p>
             <% end %>
           </div>
-          <div class="row">
+            <div class="col-6">
             <h2>My Orders</h2>
             <% @orders.last(5).each do |order| %>
-              <p>From: <%= order.start_date %></p>
-              <p>To: <%= order.return_date %></p>
-              <p>Total: ¥<%= order.total %></p>
+              <p class="bookings-dashboard-text text-left">
+              From: <%= order.start_date %>
+              To: <%= order.return_date %>
+              Total: ¥<%= order.total %>
+              </p>
             <% end %>
+          </div>
           <%= link_to 'See more...', bookings_path(@bookings, @orders) %>
           </div>
       </div>
