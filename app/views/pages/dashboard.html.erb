@@ -20,8 +20,7 @@
 
       <div class="col-sm-12 col-md-8">
         <div class="container card-right">
-          <h2 class="bookings-title">My Latest Listings</h2>
-          <p>More...</p>
+          <h2 class="bookings-title mb-3">My Latest Listings</h2>
           <div class="row">
               <% @listings.last(3).each do |listing| %>
                 <div class="col-sm-12 col-md-4">
@@ -29,27 +28,28 @@
                 </div>
               <% end %>
           </div>
-            <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+            
           </div>
+          <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
           <div class="bookings-container">
           <div class="row">
             <div class="col-6">
             <h2 class="bookings-title">My Bookings</h2>
-            <% @bookings.last(5).each do |booking| %>
+            <% @bookings.last(4).each do |booking| %>
               <p class="bookings-dashboard-text text-left">
-              <%= booking.start_date.strftime("%b %d, %Y") %>
-              <%= booking.return_date.strftime("%b %d, %Y") %>
-              <%= booking.total %>
+              <strong>From:</strong> <%= booking.start_date.strftime("%b %d, %Y") %>
+              <strong>To:</strong> <%= booking.return_date.strftime("%b %d, %Y") %>
+              <strong>Total:</strong> ¥<%= booking.total %>
               </p>
             <% end %>
           </div>
             <div class="col-6">
             <h2 class="bookings-title">My Orders</h2>
-            <% @orders.last(5).each do |order| %>
+            <% @orders.last(4).each do |order| %>
               <p class="bookings-dashboard-text text-left">
-              From: <%= order.start_date %>
-              To: <%= order.return_date %>
-              Total: ¥<%= order.total %>
+              <strong>From:</strong> <%= order.start_date.strftime("%b %d, %Y") %>
+              <strong>To:</strong> <%= order.return_date.strftime("%b %d, %Y") %>
+              <strong>Total:</strong> ¥<%= order.total %>
               </p>
             <% end %>
           </div>
