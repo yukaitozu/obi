@@ -1,4 +1,10 @@
 class BookingsController < ApplicationController
+
+  def index
+    @bookings_as_renter = policy_scope(Booking)
+    @bookings_as_borrower = current_user.bookings_as_borrower
+  end
+
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
@@ -15,8 +21,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.borrower = current_user
     @booking.listing = @listing
+    @booking.total = @listing.price * (@booking.return_date.day - @booking.start_date.day)
     if @booking.save
-      redirect_to listings_path(@listing)
+      redirect_to listings_path
     else
       render :new
     end
@@ -34,7 +41,7 @@ class BookingsController < ApplicationController
 
     bookings_to_reject = all_bookings_for_my_listing.where(approved: nil)
     bookings_to_reject.update(approved: false)
-    redirect_to dashboard_path
+    redirect_to bookings_path
   end
 
   def reject
@@ -42,12 +49,12 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.update(approved:false)
-    redirect_to booking_path
+    redirect_to bookings_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :return_date)
+    params.require(:booking).permit(:start_date, :return_date, :total)
   end
 end

@@ -1,0 +1,62 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  </li>
+ 
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <h1>My Bookings</h1>
+
+<% @bookings_as_renter.each do |booking| %>
+  <% if booking.renter %>
+  <!-- add borrower's avatar -->
+    <p> # <%= booking.id %>
+    Date: <%= booking.start_date %>
+    <%= booking.return_date %>
+    Total: <%= booking.total%>
+    </p>
+    <%= link_to "Approve", "/bookings/#{booking.id}/approve" %>
+    <%= link_to "Reject", reject_path(booking) %>
+    <% if booking.approved? %>
+      <p>Approved</p>
+    <% elsif !booking.approved? %>
+      <p>Rejected</p>
+    <% else %>
+      <p>Pending</p>
+    <% end %>
+  <% else %>
+    <%= booking.start_date %>
+    <%= booking.return_date %>
+    <% if booking.approved.nil? %>
+      <p>Pending</p>
+    <% elsif booking.approved? %>
+      <p>Approved</p>
+    <% else %>
+      <p>Rejected</p>
+    <% end %>
+  <% end %>
+<% end %>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h1>My orders</h1>
+    <% @bookings_as_borrower.each do |booking| %>
+      <p> # <%= booking.id %>
+      Date: <%= booking.start_date %>
+      <%= booking.return_date %>
+      Total: <%= booking.total %>
+      Status: <% if booking.approved.nil? %>
+        Pending
+      <% elsif booking.approved? %>
+        Approved
+      <% else %>
+        Rejected
+      <% end %>
+      </p>
+    <% end %> 
+  </div>
+  
+</div>
