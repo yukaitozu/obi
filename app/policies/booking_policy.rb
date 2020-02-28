@@ -1,7 +1,7 @@
 class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      user.bookings_as_borrower
+      user.bookings_as_renter
     end
   end
 

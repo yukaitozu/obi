@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = policy_scope(Booking)
+    @bookings_as_renter = policy_scope(Booking)
+    @bookings_as_borrower = current_user.bookings_as_borrower
   end
 
   def show
