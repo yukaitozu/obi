@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
     @booking.listing = @listing
     @booking.total = @listing.price * (@booking.return_date.day - @booking.start_date.day)
     if @booking.save
-      redirect_to listings_path
+      redirect_to dashboard_path
     else
       render :new
     end
