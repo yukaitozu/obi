@@ -30,13 +30,20 @@ h1 {
 }
 
 .search-dropdowns {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // align-items: center;
+  margin-bottom: 32px;
+  margin-left: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
 
   select{
-    width: 300px;
+    width: 250px;
+  }
+
+  .btn-listing {
+    margin-top: 42px;
   }
 
 }
