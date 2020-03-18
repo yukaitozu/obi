@@ -1,13 +1,14 @@
-<div class="home-background" style='background-image: "kimonoHome.jpg";'>
-  <div class="home-container">
-    <div class="home-row">
-        <div class="search-box col-4">
-          <h1 class="home-title">Easy kimono rentals, for any occasion</h1>
-          <%= render 'home_searchbar' %>
-          <%= link_to 'Listing a kimono instead?', new_listing_path  %>
-        </div>
+<div class="home-background">
+  
+    <div class="col-4 search-box">
+      <h1 class="home-title">Easy kimono rentals, for any occasion</h1>
+      
+        <%= render 'home_searchbar' %>
+      
+      <%= link_to 'Listing a kimono instead?', new_listing_path, class:"ml-2" %>
+      </div>
     </div>
-  </div>
+ 
 </div>
 
 

@@ -1,13 +1,15 @@
 // Specific CSS for your home-page
 .home-background {
-  // background-image:
-  // linear-gradient(to right, black, transparent),
-  // url("kimonoHome.jpg");
-  background-size: cover;
-  background-position: center;
-  // padding: 150px 0;
-  // height: 300px;
-  // width: 100%;
+    background-image:
+    linear-gradient(to right, black, transparent),
+    asset-url("kimonoHome.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
 .home-title {
@@ -31,5 +33,21 @@ p {
   margin-top: 22px;
   margin-bottom: 22px;
 }
-// }
+
+
+.search-box {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 24px;
+  
+  h1 {
+    text-align: left;
+    margin-left: 8px;
+  }
+  
+}
+
+.search-bar-home {
+  
+}
 

@@ -1,7 +1,11 @@
 <div class = "container">
   <div class =" profile-info">
     <div>
-      <%= cl_image_tag @user.photo.key, height: 150, width: 200, crop: :fill, class: "avatar-round-large" %>
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, height: 150, width: 200, crop: :fill, class: "avatar-round-large" %>
+      <% else %>
+        <%= image_tag 'blank_avatar.png', height: 150, width: 200, crop: :fill, class: "avatar-round-large" %>
+      <% end %>
     </div>
     <h1><%= @user.first_name  %></h1>
     <h1><%= @user.last_name %></h1>
