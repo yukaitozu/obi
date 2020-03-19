@@ -1,8 +1,12 @@
 <%= form_tag listings_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a kimono"
-  %>
-  <%= submit_tag "Search", class: "btn btn-red" %>
+  <div class="line-up">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a kimono"
+    %>
+    <div class="home-search-item">
+      <%= submit_tag "Search", class: "btn-red"%>
+    </div>
+  </div>
 <% end %>
