@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   authenticated :user do
   root to: 'pages#dashboard', as: :authenticated_root
   end
@@ -22,6 +22,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :users, only: [:show]
+  resources :users, only: [:show,  :edit, :update]
   resources :bookings, only: [:index, :show]
 end
