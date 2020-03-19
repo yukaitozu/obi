@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :listings
   has_many :bookings_as_borrower, class_name: "Booking"
   has_many :bookings_as_renter, through: :listings, source: :bookings
- 
+
 
 
   validates :email, presence: true
