@@ -3,6 +3,7 @@
   // background-image:
   // linear-gradient(to right, black, transparent),
   // url("kimonoHome.jpg");
+  background-image: url("https://res.cloudinary.com/drihevibr/image/upload/v1584609011/kimonoHome_oy238m.jpg");
   background-size: cover;
   background-position: center;
   // padding: 150px 0;
@@ -14,7 +15,13 @@
   font-family: "Roboto";
   color: white;
   text-align: center;
+  text-shadow: 2px 2px 8px black;
+  margin-bottom: 28px;
+}
 
+.search-box{
+  top: 260px;
+  padding-left: 48px;
 }
 
 p {
@@ -23,13 +30,15 @@ p {
   margin-top: 18px;
 }
 .home-row {
-  margin-top: 125px;
   text-align: center;
+  height: calc(100vh - 68px);
 }
 
-.btn {
-  margin-top: 22px;
-  margin-bottom: 22px;
+.home-search-item{
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
-// }
 
+a{
+  color: white;
+}
