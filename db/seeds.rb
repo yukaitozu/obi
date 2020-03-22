@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 require 'date'
 KIMONOS = ["Red Kimono", "Edo Era Kimono", "Summer Yukata", "Embroidered Mens Kimono", "Purple Yukata", "Fancy Hakama", "Bridal Kimono", "Casual Kimono", "Graduation Hakama", "Playful Kids Kimono", "Beautiful Furisode", "Yellow Yukata", "Blue Short Kimono", "Formal Green Kimono"]
 
