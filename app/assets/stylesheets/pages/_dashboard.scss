@@ -40,7 +40,8 @@
 
   .listing-card {
     width: 150px;
-    height: 225px;
+    height: 241px;
+    padding-top: 14px;
     border-radius: 4px;
 
     img {
@@ -48,12 +49,16 @@
       height: 140px;
     }
 
-    .icons {
-      color: $red;
-    }
-
   }
 
+}
+
+.fas {
+  color: $light-gray;
+}
+
+.fas:hover {
+  color: $red;
 }
 
 .bookings-dashboard-text {
@@ -67,6 +72,6 @@
 }
 
 .bookings-container {
-  margin-top: 24px;
+  margin-top: 36px;
   margin-bottom: 16px;
 }
