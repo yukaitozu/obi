@@ -45,7 +45,7 @@ padding: 16px;
   height: 325px;
   width: 225px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
   align-items: center;
 
   .index-card-pic img {
@@ -55,6 +55,10 @@ padding: 16px;
     padding: 10px;
     align-items: center;
 
+    }
+
+    a {
+      color: $red;
     }
 
     p {
