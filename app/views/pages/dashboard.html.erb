@@ -13,8 +13,8 @@
           </div>
           <%= render 'pages/profile_card' %>
             <div>
-              <%= link_to 'View Profile', user_path(current_user), class: "btn btn-red"  %>
-              <%= link_to 'Edit Profile', edit_user_path(current_user), class: "btn btn-red"  %>
+              <%#= link_to 'View Profile', user_path(current_user), class: "btn btn-red"  %>
+              <%= link_to 'Edit Profile', edit_user_path(current_user), class: "btn btn-edit-profile"  %>
             </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
           </div>
 
           </div>
-          <%= link_to 'New Listing', new_listing_path, class: "btn btn-red"  %>
+          <%= link_to 'New Listing', new_listing_path, class: "btn-new-listing"  %>
           <div class="bookings-container">
           <div class="row">
             <div class="col-6">

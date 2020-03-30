@@ -10,6 +10,22 @@
   color: black;
 }
 
+.btn-edit-profile {
+  background-color: $light-gray;
+  font-color: black;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+
+.btn-new-listing {
+  background-color: $red;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 24px;
+  border: #BF4226;
+  margin-top: 36px;
+}
+
 .btn-gray {
   background-color: $light-gray;
   font-color: black;
