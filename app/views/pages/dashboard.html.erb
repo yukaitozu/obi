@@ -24,9 +24,9 @@
           <h2 class="bookings-title mb-3">My Latest Listings</h2>
           <div class="row">
               <% @listings.last(3).each do |listing| %>
-                <div class="col-sm-12 col-md-4">
-                  <%= render 'pages/listing', listing: listing %>
-                </div>
+
+                  <%= render 'pages/listing', listing: listing, class: "cards"%>
+
               <% end %>
           </div>
 

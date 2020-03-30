@@ -1,4 +1,11 @@
 // dashboard cards //
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 36px;
+  flex-grow: 1;
+}
+
 .card-product {
 overflow: hidden;
 height: 120px;

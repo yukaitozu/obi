@@ -2,9 +2,10 @@
 .listing-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 10px;
-  justify-content: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 48px;
+  margin-top: 24px;
+  justify-content: between;
   align-items: center;
 
   img {
